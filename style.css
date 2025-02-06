@@ -118,11 +118,13 @@ footer {
     max-width: 1366px;
     padding: 3rem 0 3rem 0;
     margin: 0 auto; 
+    gap: 2rem;
 }
 
 footer .container .right-side img {
-    max-width: 700px;
-    height: auto;
+    max-width: 100%; /* Ensures the image stays within the container */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover;
 }
 
 footer .container .left-side h1 {
@@ -134,3 +136,30 @@ footer .container .left-side h4 {
     font-size: 1.3rem;
     color: #fff;
 }
+
+footer .container .right-side {
+    flex: 1;
+    min-width: 300px; /* Helps define a minimum size for smaller screens */
+}
+
+@media screen and (max-width: 1200px) {
+    .about-me {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .about-me h1 {
+        float: left ;
+        flex-wrap: wrap;
+    }
+
+    .about-me p {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+   
+}
+
+
